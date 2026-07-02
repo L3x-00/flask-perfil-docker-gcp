@@ -1,6 +1,7 @@
 FROM python:latest
 
 ENV DEBUG FALSE
+ENV GCS_BUCKET_NAME my-gcs-bucket
 
 WORKDIR /app
 
