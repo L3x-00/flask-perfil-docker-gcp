@@ -30,9 +30,6 @@ def storage_route():
                 # Subir el archivo
                 blob.upload_from_file(file)
                 
-                # Hacer el archivo público (reemplaza la firma por falta de permisos)
-                blob.make_public()
-                
                 # Construir la URL pública estándar
                 public_url = f"https://storage.googleapis.com/{GCS_BUCKET_NAME}/{blob.name}"
 
