@@ -1,3 +1,5 @@
+
+
 import os
 import datetime
 from flask import Flask, render_template, request
@@ -32,9 +34,5 @@ def storage_route():
                 
                 # Construir la URL pública estándar
                 public_url = f"https://storage.googleapis.com/{GCS_BUCKET_NAME}/{blob.name}"
-
+    
     return render_template('storage.html', title='Equisd - Storage', signed_url=public_url)
-
-if __name__ == "__main__":
-    print(f"running debug as {DEBUG}")
-    app.run(debug=DEBUG, host="0.0.0.0")
